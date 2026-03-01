@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-inter);
+
+  --color-background: #0a0000;
+  --color-foreground: #ffffff;
+  --color-primary: #8a1515;
+  --color-primary-dark: #5a0909;
+  --color-accent: #e2e2e2;
+  --color-border: rgba(255, 255, 255, 0.15);
+
+  --text-hero: clamp(2.5rem, 5vw, 4.5rem);
+  --text-h1: clamp(2.25rem, 4vw, 4rem);
+  --text-h2: clamp(1.75rem, 3vw, 3rem);
+  --text-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --text-body: clamp(0.875rem, 1vw, 1rem);
+  --text-small: 0.75rem;
+}
+
+:root {
+  --background: #0a0000;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
