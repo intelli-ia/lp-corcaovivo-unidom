@@ -15,7 +15,7 @@ export default function Hero() {
                 <div className="absolute inset-x-0 bottom-0 h-full w-full bg-gradient-to-t from-background via-primary-dark/80 to-transparent" />
                 <div
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[60vw] md:h-[60vw] rounded-full mix-blend-color-dodge opacity-60 blur-[100px] pointer-events-none"
-                    style={{ background: 'radial-gradient(circle, #ff3333 0%, transparent 70%)' }}
+                    style={{ background: 'radial-gradient(circle, #e59f14 0%, transparent 70%)' }}
                 />
                 {/* Placeholder for the main hero image */}
                 <div className="absolute right-0 bottom-0 md:right-[10%] w-[120%] md:w-[60%] h-[100%] max-h-screen object-cover opacity-80 mix-blend-luminosity mix-blend-hard-light bg-black/20" />

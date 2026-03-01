@@ -4,10 +4,10 @@
   --font-display: var(--font-playfair);
   --font-body: var(--font-inter);
 
-  --color-background: #0a0000;
+  --color-background: #0f0f0f;
   --color-foreground: #ffffff;
-  --color-primary: #8a1515;
-  --color-primary-dark: #5a0909;
+  --color-primary: #e59f14;
+  --color-primary-dark: #b87f0f;
   --color-accent: #e2e2e2;
   --color-border: rgba(255, 255, 255, 0.15);
 
@@ -20,7 +20,7 @@
 }
 
 :root {
-  --background: #0a0000;
+  --background: #0f0f0f;
   --foreground: #ffffff;
 }
 

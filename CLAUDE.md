@@ -17,7 +17,7 @@ No evento ser√° feito o pitch de vendas da mentoria Lidere Sua Marca Chave que √
 
 #0f0f0f
 #ffffff
-#ff3333
+#e59f14
 
 ## Fontes
 

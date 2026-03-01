@@ -20,7 +20,7 @@ export default function CTA() {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(255, 51, 51, 0.1), transparent 40%)`;
+            glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(229, 159, 20, 0.1), transparent 40%)`;
         };
 
         const section = sectionRef.current;
@@ -46,7 +46,7 @@ export default function CTA() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-20 pointer-events-none">
                 <div
                     className="w-full h-full rounded-full blur-[150px]"
-                    style={{ background: 'radial-gradient(circle, #ff3333 0%, transparent 70%)' }}
+                    style={{ background: 'radial-gradient(circle, #e59f14 0%, transparent 70%)' }}
                 />
             </div>
 
@@ -61,8 +61,8 @@ export default function CTA() {
 
                     <div className="relative px-8 py-16 md:px-16 md:py-20">
                         {/* Small badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff3333]/10 border border-[#ff3333]/20 mb-8">
-                            <span className="w-2 h-2 rounded-full bg-[#ff3333] animate-pulse" />
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#e59f14]/10 border border-[#e59f14]/20 mb-8">
+                            <span className="w-2 h-2 rounded-full bg-[#e59f14] animate-pulse" />
                             <span className="text-xs font-medium tracking-wider uppercase text-white/90">
                                 Últimas vagas
                             </span>
@@ -94,7 +94,7 @@ export default function CTA() {
                                         <div key={i} className="flex items-start gap-3">
                                             <div className="mt-1 flex-shrink-0">
                                                 <svg
-                                                    className="w-5 h-5 text-[#ff3333]"
+                                                    className="w-5 h-5 text-[#e59f14]"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
@@ -127,7 +127,7 @@ export default function CTA() {
                                             <span className="text-sm text-white/50 line-through">
                                                 De R$ 200
                                             </span>
-                                            <span className="inline-flex px-2 py-1 bg-[#ff3333]/20 border border-[#ff3333]/30 rounded text-xs font-semibold text-[#ff3333]">
+                                            <span className="inline-flex px-2 py-1 bg-[#e59f14]/20 border border-[#e59f14]/30 rounded text-xs font-semibold text-[#e59f14]">
                                                 -5%
                                             </span>
                                         </div>
@@ -142,7 +142,7 @@ export default function CTA() {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <button className="group relative w-full bg-white text-black hover:bg-[#ff3333] hover:text-white transition-all duration-500 px-8 py-5 rounded-xl font-semibold text-lg overflow-hidden">
+                                    <button className="group relative w-full bg-white text-black hover:bg-[#e59f14] hover:text-white transition-all duration-500 px-8 py-5 rounded-xl font-semibold text-lg overflow-hidden">
                                         {/* Button shine effect */}
                                         <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
@@ -172,12 +172,12 @@ export default function CTA() {
                                         </div>
                                         <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
                                             <div
-                                                className="h-full bg-gradient-to-r from-[#ff3333] to-[#ff6666] rounded-full transition-all duration-1000"
+                                                className="h-full bg-gradient-to-r from-[#e59f14] to-[#f0b942] rounded-full transition-all duration-1000"
                                                 style={{ width: '33%' }}
                                             />
                                         </div>
                                         <p className="text-xs text-white/50 mt-3 text-center">
-                                            ⚡ Apenas <span className="text-[#ff3333] font-semibold">10 vagas</span> disponíveis neste lote
+                                            ⚡ Apenas <span className="text-[#e59f14] font-semibold">10 vagas</span> disponíveis neste lote
                                         </p>
                                     </div>
 
