@@ -4,10 +4,13 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const items = [
-    "Comparecimento de 50 a 75%",
-    "Conversão de 11 a 20%",
-    "Lead paga o tráfego",
-    "Converte público frio (50%)"
+    "Clareza no seu posicionamento",
+    "Estruturação completa do negócio",
+    "Inteligência emocional aplicada",
+    "Liderança fortalecida em 1 dia",
+    "Gerenciamento feminino",
+    "Desenvolvimento comercial",
+    "Estratégia clara"
 ];
 
 export function Marquee() {
