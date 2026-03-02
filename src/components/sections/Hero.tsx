@@ -65,28 +65,17 @@ export default function Hero() {
                         "text-2xl sm:text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.2] tracking-tight mb-8 font-display",
                         playfair.className
                     )}>
-                        Aprenda em 1 dia como uma mulher deve liderar o seu negócio e o seu emocional.
+                        Aprenda Raciocínio Clínico com o Dr. Carlos Gusmão — Ao Vivo, Gratuito e Presencial.
                     </h1>
 
                     <p className="text-base md:text-lg mb-10 text-white/70 max-w-xl font-light leading-relaxed mx-auto md:mx-0">
-                        Um dia intensivo para você sair com clareza,<br />
-                        estratégia e a confiança necessária para liderar<br />
-                        seu negócio com inteligência emocional.
+                        Uma oportunidade única de participar da aula 55 do CORC e absorver o método que está formando a nova geração de médicos excepcionais.
                     </p>
 
                     <div className="flex flex-col gap-6 md:flex-row md:items-center max-w-max mx-auto md:mx-0">
                         <button className="bg-[#0f0f0f] border border-white/10 hover:bg-white hover:text-black transition-colors duration-300 text-white px-8 py-4 rounded font-medium flex items-center justify-center gap-3">
                             <span>Garantir Inscrição</span>
                         </button>
-                    </div>
-
-                    <div className="mt-8 max-w-xs mx-auto md:mx-0">
-                        <div className="h-1 w-full bg-white/10 relative rounded-full overflow-hidden">
-                            <div className="absolute top-0 left-0 h-full w-[5%] bg-white rounded-full"></div>
-                        </div>
-                        <p className="mt-2 text-xs opacity-70">
-                            <span className="font-semibold">5%</span> das vagas preenchidas
-                        </p>
                     </div>
                 </div>
             </div>
