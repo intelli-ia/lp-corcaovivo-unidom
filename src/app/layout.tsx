@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Workshop Lançamento Pago - 5ª Edição",
-  description: "Desenhe a estratégia do seu lançamento pago do jeito certo, em apenas 2 dias.",
+  title: "CORC Ao Vivo - UNIDOM",
+  description: "Aprenda Raciocínio Clínico com o Dr. Carlos Gusmão - Aula gratuita e presencial no Auditório da UNIDOM",
 };
 
 export default function RootLayout({
