@@ -142,6 +142,24 @@ END:VCALENDAR`;
                         Uma oportunidade única de participar ao vivo de uma das aulas do CORC e absorver o método que está formando a nova geração de médicos excepcionais.
                     </p>
 
+                    {/* Barra de Vagas */}
+                    <div className="mb-8 max-w-md mx-auto md:mx-0">
+                        <div className="flex items-center justify-between mb-3">
+                            <span className="text-sm font-medium text-white/90">Vagas Preenchidas</span>
+                            <span className="text-sm font-semibold text-[#e59f14]">25 vagas restantes</span>
+                        </div>
+                        <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
+                            {/* Barra de progresso preenchida */}
+                            <div
+                                className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#e59f14] to-[#e59f14]/80 rounded-full transition-all duration-1000 ease-out"
+                                style={{ width: '60%' }}
+                            >
+                                {/* Brilho interno */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent" />
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="flex flex-col gap-6 md:flex-row md:items-center max-w-max mx-auto md:mx-0">
                         <button
                             onClick={() => setIsModalOpen(true)}
