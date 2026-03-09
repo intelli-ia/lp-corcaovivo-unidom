@@ -146,7 +146,7 @@ END:VCALENDAR`;
                     <div className="mb-8 max-w-md mx-auto md:mx-0">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-sm font-medium text-white/90">Vagas Preenchidas</span>
-                            <span className="text-sm font-semibold text-[#e59f14]">100 vagas restantes</span>
+                            <span className="text-sm font-semibold text-[#e59f14]">80 vagas restantes</span>
                         </div>
                         <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
                             {/* Barra de progresso preenchida */}
