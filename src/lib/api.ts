@@ -1,6 +1,7 @@
 interface RegistrationPayload {
   nome: string;
   whatsapp: string;
+  is_corc: boolean;
 }
 
 export type RegistrationResult = 'success' | 'full';

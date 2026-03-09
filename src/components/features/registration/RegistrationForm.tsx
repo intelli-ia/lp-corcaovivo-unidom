@@ -17,6 +17,7 @@ interface RegistrationFormProps {
 interface FormData {
   nome: string;
   whatsapp: string;
+  is_corc: boolean;
 }
 
 interface FormErrors {
@@ -27,7 +28,7 @@ interface FormErrors {
 type FormStatus = 'idle' | 'submitting' | 'error';
 
 export function RegistrationForm({ onSuccess }: RegistrationFormProps) {
-  const [formData, setFormData] = useState<FormData>({ nome: '', whatsapp: '' });
+  const [formData, setFormData] = useState<FormData>({ nome: '', whatsapp: '', is_corc: false });
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<FormStatus>('idle');
   const [apiError, setApiError] = useState<string | null>(null);
@@ -70,6 +71,7 @@ export function RegistrationForm({ onSuccess }: RegistrationFormProps) {
       const result = await sendRegistration({
         nome: formData.nome.trim(),
         whatsapp: formData.whatsapp.replace(/\D/g, ''),
+        is_corc: formData.is_corc,
       });
 
       onSuccess(result);
@@ -132,6 +134,36 @@ export function RegistrationForm({ onSuccess }: RegistrationFormProps) {
         disabled={status === 'submitting'}
         required
       />
+
+      <div className="space-y-2">
+        <p className="text-white/80 text-sm font-medium">É aluno do CORC?</p>
+        <div className="flex gap-6">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="is_corc"
+              value="nao"
+              checked={!formData.is_corc}
+              onChange={() => setFormData((prev) => ({ ...prev, is_corc: false }))}
+              disabled={status === 'submitting'}
+              className="accent-[#e59f14] w-4 h-4"
+            />
+            <span className="text-white/70 text-sm">Não</span>
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="is_corc"
+              value="sim"
+              checked={formData.is_corc}
+              onChange={() => setFormData((prev) => ({ ...prev, is_corc: true }))}
+              disabled={status === 'submitting'}
+              className="accent-[#e59f14] w-4 h-4"
+            />
+            <span className="text-white/70 text-sm">Sim</span>
+          </label>
+        </div>
+      </div>
 
       {apiError && (
         <div
