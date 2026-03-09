@@ -15,8 +15,8 @@ export default function Hero() {
         // Criar evento no formato iCalendar
         const event = {
             title: 'CORC Ao Vivo - UNIDOM',
-            description: 'Aprenda Raciocínio Clínico com o Dr. Carlos Gusmão - Aula gratuita e presencial. Local: Auditório da UNIDOM',
-            location: 'Av. Estados Unidos, 20 - Comércio, Salvador - BA, 40010-020',
+            description: 'Aprenda Raciocínio Clínico com o Dr. Carlos Gusmão - Aula gratuita e presencial. Local: UnidomPedro Afya Civil Trade - Auditório 1° Andar Civil Trade',
+            location: 'UnidomPedro Afya Civil Trade - R. Frederico Simões - Caminho das Árvores, Salvador - BA, 41820-774',
             startDate: '2026-03-21T08:00:00',
             endDate: '2026-03-21T11:00:00'
         };
@@ -109,7 +109,7 @@ END:VCALENDAR`;
                     {/* Mobile: Vertical list */}
                     <div className="flex flex-col gap-1 text-right md:hidden font-medium opacity-90">
                         <span className="font-semibold text-lg">21 de Março às 08h</span>
-                        <span className="font-light text-sm">Auditório da UNIDOM</span>
+                        <span className="font-light text-sm">UnidomPedro Afya Civil Trade</span>
                     </div>
                     {/* Desktop: Horizontal layout */}
                     <div className="hidden md:flex items-center gap-2 font-medium opacity-90">
@@ -123,7 +123,7 @@ END:VCALENDAR`;
                         <span className="opacity-50">|</span>
                         <span className="font-light">08h</span>
                         <span className="opacity-50">|</span>
-                        <span className="font-light">Auditório da UNIDOM</span>
+                        <span className="font-light">UnidomPedro Afya Civil Trade</span>
                     </div>
                 </div>
             </header>
@@ -146,7 +146,7 @@ END:VCALENDAR`;
                     <div className="mb-8 max-w-md mx-auto md:mx-0">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-sm font-medium text-white/90">Vagas Preenchidas</span>
-                            <span className="text-sm font-semibold text-[#e59f14]">25 vagas restantes</span>
+                            <span className="text-sm font-semibold text-[#e59f14]">35 vagas restantes</span>
                         </div>
                         <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
                             {/* Barra de progresso preenchida */}

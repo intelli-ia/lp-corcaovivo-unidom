@@ -105,7 +105,7 @@ export function RegistrationForm({ onSuccess }: RegistrationFormProps) {
       <Input
         id="nome"
         name="nome"
-        label="Nome"
+        label="Nome Completo"
         value={formData.nome}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, nome: e.target.value }))

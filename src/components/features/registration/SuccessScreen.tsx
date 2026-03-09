@@ -55,16 +55,16 @@ export function SuccessScreen({ onAddToCalendar }: SuccessScreenProps) {
           <Calendar className="w-5 h-5 text-[#e59f14] mt-0.5 flex-shrink-0" />
           <div>
             <p className="text-white font-medium">21 de Março, 2026</p>
-            <p className="text-white/60 text-sm">08h às 17h</p>
+            <p className="text-white/60 text-sm">08h às 13h</p>
           </div>
         </div>
 
         <div className="flex items-start gap-3">
           <MapPin className="w-5 h-5 text-[#e59f14] mt-0.5 flex-shrink-0" />
           <div>
-            <p className="text-white font-medium">Auditório da UNIDOM</p>
+            <p className="text-white font-medium">UnidomPedro Afya Civil Trade</p>
             <p className="text-white/60 text-sm">
-              Av. Estados Unidos, 20 - Comércio, Salvador - BA, 40010-020
+              Auditório 1° Andar Civil Trade
             </p>
           </div>
         </div>
