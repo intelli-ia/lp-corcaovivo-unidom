@@ -4,14 +4,14 @@ import { useState, FormEvent } from 'react';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { validateField } from '@/lib/validation';
-import { sendRegistration } from '@/lib/api';
+import { sendRegistration, RegistrationResult } from '@/lib/api';
 import { Playfair_Display } from 'next/font/google';
 import { cn } from '@/lib/utils';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
 interface RegistrationFormProps {
-  onSuccess: (data: { nome: string; whatsapp: string }) => void;
+  onSuccess: (result: RegistrationResult) => void;
 }
 
 interface FormData {
@@ -67,13 +67,12 @@ export function RegistrationForm({ onSuccess }: RegistrationFormProps) {
 
     try {
       // Enviar para webhook
-      await sendRegistration({
+      const result = await sendRegistration({
         nome: formData.nome.trim(),
         whatsapp: formData.whatsapp.replace(/\D/g, ''),
       });
 
-      // Sucesso
-      onSuccess(formData);
+      onSuccess(result);
     } catch (error) {
       // Erro
       setStatus('error');

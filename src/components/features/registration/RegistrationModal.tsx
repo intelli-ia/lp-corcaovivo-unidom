@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Modal } from '@/components/ui/Modal';
 import { RegistrationForm } from './RegistrationForm';
 import { SuccessScreen } from './SuccessScreen';
+import { FullScreen } from './FullScreen';
+import { RegistrationResult } from '@/lib/api';
 
 interface RegistrationModalProps {
   isOpen: boolean;
@@ -12,7 +14,7 @@ interface RegistrationModalProps {
   onAddToCalendar: () => void;
 }
 
-type ModalState = 'form' | 'success';
+type ModalState = 'form' | 'success' | 'full';
 
 export function RegistrationModal({
   isOpen,
@@ -21,8 +23,8 @@ export function RegistrationModal({
 }: RegistrationModalProps) {
   const [modalState, setModalState] = useState<ModalState>('form');
 
-  const handleSuccess = () => {
-    setModalState('success');
+  const handleSuccess = (result: RegistrationResult) => {
+    setModalState(result === 'full' ? 'full' : 'success');
   };
 
   const handleClose = () => {
@@ -46,7 +48,7 @@ export function RegistrationModal({
           >
             <RegistrationForm onSuccess={handleSuccess} />
           </motion.div>
-        ) : (
+        ) : modalState === 'success' ? (
           <motion.div
             key="success"
             initial={{ opacity: 0, x: -20 }}
@@ -55,6 +57,16 @@ export function RegistrationModal({
             transition={{ duration: 0.3 }}
           >
             <SuccessScreen onAddToCalendar={onAddToCalendar} />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="full"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <FullScreen />
           </motion.div>
         )}
       </AnimatePresence>

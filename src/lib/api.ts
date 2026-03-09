@@ -3,9 +3,11 @@ interface RegistrationPayload {
   whatsapp: string;
 }
 
+export type RegistrationResult = 'success' | 'full';
+
 const WEBHOOK_URL = 'https://webhooks.intelliai.com.br/webhook/9dea8b06-e046-4744-8c24-24997598069f';
 
-export async function sendRegistration(data: RegistrationPayload): Promise<void> {
+export async function sendRegistration(data: RegistrationPayload): Promise<RegistrationResult> {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
 
@@ -21,11 +23,17 @@ export async function sendRegistration(data: RegistrationPayload): Promise<void>
 
     clearTimeout(timeoutId);
 
+    const text = await response.text();
+    const lower = text.toLowerCase();
+
+    if (lower.includes('vagas completas')) {
+      return 'full';
+    }
+
     if (!response.ok) {
-      // Tentar extrair mensagem de erro do servidor
       let errorMessage = 'Erro ao processar inscrição';
       try {
-        const errorData = await response.json();
+        const errorData = JSON.parse(text);
         errorMessage = errorData.message || errorMessage;
       } catch {
         errorMessage = `Erro ${response.status}: ${response.statusText}`;
@@ -33,7 +41,7 @@ export async function sendRegistration(data: RegistrationPayload): Promise<void>
       throw new Error(errorMessage);
     }
 
-    // Sucesso - webhook pode retornar 200, 201 ou 204
+    return 'success';
   } catch (error) {
     if (error instanceof Error) {
       if (error.name === 'AbortError') {
