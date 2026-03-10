@@ -146,13 +146,13 @@ END:VCALENDAR`;
                     <div className="mb-8 max-w-md mx-auto md:mx-0">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-sm font-medium text-white/90">Vagas Preenchidas</span>
-                            <span className="text-sm font-semibold text-[#e59f14]">80 vagas restantes</span>
+                            <span className="text-sm font-semibold text-[#e59f14]">40 vagas restantes</span>
                         </div>
                         <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
                             {/* Barra de progresso preenchida */}
                             <div
                                 className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#e59f14] to-[#e59f14]/80 rounded-full transition-all duration-1000 ease-out"
-                                style={{ width: '75%' }}
+                                style={{ width: '85%' }}
                             >
                                 {/* Brilho interno */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent" />
