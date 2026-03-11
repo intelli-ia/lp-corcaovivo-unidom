@@ -135,7 +135,9 @@ END:VCALENDAR`;
                         "text-3xl sm:text-3xl md:text-4xl lg:text-[2.5rem] leading-[1.2] tracking-tight mb-8 font-display",
                         playfair.className
                     )}>
-                        Aprenda Raciocínio Clínico com o Dr. Carlos Antônio Moura. Ao Vivo, Gratuito e Presencial.
+                        Aprenda Raciocínio Clínico com o Dr. Carlos Antônio Moura.
+                        <br />
+                        Ao Vivo, Gratuito e Presencial.
                     </h1>
 
                     <p className="text-base md:text-lg mb-10 text-white/70 max-w-xl font-light leading-relaxed mx-auto md:mx-0">
