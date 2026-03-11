@@ -187,7 +187,7 @@ export function RegistrationForm({ onSuccess }: RegistrationFormProps) {
             <span aria-hidden="true">Processando...</span>
           </>
         ) : (
-          'Confirmar Inscrição'
+          'Entrar na lista'
         )}
       </Button>
     </form>

@@ -135,24 +135,24 @@ END:VCALENDAR`;
                         "text-3xl sm:text-3xl md:text-4xl lg:text-[2.5rem] leading-[1.2] tracking-tight mb-8 font-display",
                         playfair.className
                     )}>
-                        Aprenda Raciocínio Clínico com o Dr. Carlos Gusmão — Ao Vivo, Gratuito e Presencial.
+                        As vagas para esta edição se encerraram.
                     </h1>
 
                     <p className="text-base md:text-lg mb-10 text-white/70 max-w-xl font-light leading-relaxed mx-auto md:mx-0">
-                        Uma oportunidade única de participar ao vivo de uma das aulas do CORC e absorver o método que está formando a nova geração de médicos excepcionais.
+                        Cadastre-se na lista de espera caso surjam vagas para esta edição do CORC Ao Vivo.
                     </p>
 
                     {/* Barra de Vagas */}
                     <div className="mb-8 max-w-md mx-auto md:mx-0">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-sm font-medium text-white/90">Vagas Preenchidas</span>
-                            <span className="text-sm font-semibold text-[#e59f14]">17 vagas restantes</span>
+                            <span className="text-sm font-semibold text-[#e59f14]">100%</span>
                         </div>
                         <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
                             {/* Barra de progresso preenchida */}
                             <div
                                 className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#e59f14] to-[#e59f14]/80 rounded-full transition-all duration-1000 ease-out"
-                                style={{ width: '87%' }}
+                                style={{ width: '100%' }}
                             >
                                 {/* Brilho interno */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent" />
@@ -165,7 +165,7 @@ END:VCALENDAR`;
                             onClick={() => setIsModalOpen(true)}
                             className="bg-[#e59f14] border border-[#e59f14]/20 hover:bg-white hover:text-[#e59f14] transition-colors duration-300 text-white px-8 py-4 rounded font-medium text-lg flex items-center justify-center gap-3"
                         >
-                            <span>Garantir Inscrição</span>
+                            <span>Entrar na Lista de Espera</span>
                         </button>
                     </div>
                 </div>
