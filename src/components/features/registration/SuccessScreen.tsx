@@ -37,10 +37,10 @@ export function SuccessScreen({ onAddToCalendar }: SuccessScreenProps) {
             playfair.className
           )}
         >
-          Inscrição Confirmada!
+          Você entrou para a lista de espera!
         </h2>
         <p className="text-white/70">
-          Sua presença está garantida na aula.
+          Avisaremos caso surjam novas vagas.
         </p>
       </div>
 

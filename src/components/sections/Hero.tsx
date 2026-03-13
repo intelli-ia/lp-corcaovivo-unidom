@@ -135,11 +135,11 @@ END:VCALENDAR`;
                         "text-3xl sm:text-3xl md:text-4xl lg:text-[2.5rem] leading-[1.2] tracking-tight mb-8 font-display",
                         playfair.className
                     )}>
-                        As vagas para esta edição se encerraram.
+                        Cadastre-se na lista de espera da 2ª edição do CORC Ao Vivo.
                     </h1>
 
                     <p className="text-base md:text-lg mb-10 text-white/70 max-w-xl font-light leading-relaxed mx-auto md:mx-0">
-                        Cadastre-se na lista de espera caso surjam vagas para esta edição do CORC Ao Vivo.
+                        Ainda não garantiu sua vaga? Inscreva-se na lista de espera e fique atento, estamos preparando condições de participação.
                     </p>
 
                     {/* Barra de Vagas */}
