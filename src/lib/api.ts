@@ -6,7 +6,7 @@ interface RegistrationPayload {
 
 export type RegistrationResult = 'success' | 'full';
 
-const WEBHOOK_URL = 'https://webhooks.intelliai.com.br/webhook/9dea8b06-e046-4744-8c24-24997598069f';
+const WEBHOOK_URL = 'https://webhooks.intelliai.com.br/webhook/niwwlbvysZZ4h9iFMKmduOYvQvTf3iAQiccaSPPr';
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
