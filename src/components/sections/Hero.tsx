@@ -12,38 +12,7 @@ export default function Hero() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleAddToCalendar = () => {
-        // Criar evento no formato iCalendar
-        const event = {
-            title: 'CORC Ao Vivo - UNIDOM',
-            description: 'Aprenda Raciocínio Clínico com o Dr. Carlos Gusmão - Aula gratuita e presencial. Local: UnidomPedro Afya Civil Trade - Auditório 1° Andar Civil Trade',
-            location: 'UnidomPedro Afya Civil Trade - R. Frederico Simões - Caminho das Árvores, Salvador - BA, 41820-774',
-            startDate: '2026-03-21T08:00:00',
-            endDate: '2026-03-21T11:00:00'
-        };
-
-        const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//CORC Ao Vivo//PT
-BEGIN:VEVENT
-UID:${Date.now()}@corc-aula.com
-DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
-DTSTART:20260321T080000
-DTEND:20260321T110000
-SUMMARY:${event.title}
-DESCRIPTION:${event.description}
-LOCATION:${event.location}
-STATUS:CONFIRMED
-SEQUENCE:0
-END:VEVENT
-END:VCALENDAR`;
-
-        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'corc-aula-unidom.ics';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Calendar logic removed as requested
     };
 
     return (
@@ -109,7 +78,6 @@ END:VCALENDAR`;
                     {/* Mobile: Vertical list */}
                     <div className="flex flex-col gap-1 text-right md:hidden font-medium opacity-90">
                         <span className="font-semibold text-lg">21 de Março às 08h</span>
-                        <span className="font-light text-sm">UnidomPedro Afya Civil Trade</span>
                     </div>
                     {/* Desktop: Horizontal layout */}
                     <div className="hidden md:flex items-center gap-2 font-medium opacity-90">
@@ -122,8 +90,6 @@ END:VCALENDAR`;
                         <span className="font-semibold">21 de Março</span>
                         <span className="opacity-50">|</span>
                         <span className="font-light">08h</span>
-                        <span className="opacity-50">|</span>
-                        <span className="font-light">UnidomPedro Afya Civil Trade</span>
                     </div>
                 </div>
             </header>
@@ -135,11 +101,11 @@ END:VCALENDAR`;
                         "text-3xl sm:text-3xl md:text-4xl lg:text-[2.5rem] leading-[1.2] tracking-tight mb-8 font-display",
                         playfair.className
                     )}>
-                        Cadastre-se na lista de espera da 2ª edição do CORC Ao Vivo.
+                        Garanta a oportunidade de participar de forma online do CORC Aberto
                     </h1>
 
                     <p className="text-base md:text-lg mb-10 text-white/70 max-w-xl font-light leading-relaxed mx-auto md:mx-0">
-                        Ainda não garantiu sua vaga? Inscreva-se na lista de espera e fique atento, estamos preparando condições de participação.
+                        Inscreva-se tocando no botão abaixo para garantir sua vaga na transmissão online.
                     </p>
 
                     {/* Barra de Vagas */}

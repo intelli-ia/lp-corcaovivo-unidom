@@ -1,15 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle, Calendar, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { CheckCircle, MessageCircle } from 'lucide-react';
 import { Playfair_Display } from 'next/font/google';
 import { cn } from '@/lib/utils';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
 
 interface SuccessScreenProps {
-  onAddToCalendar: () => void;
+  onAddToCalendar?: () => void;
 }
 
 export function SuccessScreen({ onAddToCalendar }: SuccessScreenProps) {
@@ -37,48 +36,25 @@ export function SuccessScreen({ onAddToCalendar }: SuccessScreenProps) {
             playfair.className
           )}
         >
-          Você entrou para a lista de espera!
+          Sua inscrição online foi confirmada!
         </h2>
         <p className="text-white/70">
-          Avisaremos caso surjam novas vagas.
+          Você receberá o link de acesso através do grupo de WhatsApp.
         </p>
       </div>
 
-      {/* Detalhes do evento */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        className="bg-white/5 border border-white/10 rounded-lg p-4 text-left space-y-3"
-      >
-        <div className="flex items-start gap-3">
-          <Calendar className="w-5 h-5 text-[#e59f14] mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="text-white font-medium">21 de Março, 2026</p>
-            <p className="text-white/60 text-sm">08h às 13h</p>
-          </div>
-        </div>
-
-        <div className="flex items-start gap-3">
-          <MapPin className="w-5 h-5 text-[#e59f14] mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="text-white font-medium">UnidomPedro Afya Civil Trade</p>
-            <p className="text-white/60 text-sm">
-              Auditório 1° Andar Civil Trade
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Botão Salvar na Agenda */}
-      <Button
-        onClick={onAddToCalendar}
-        variant="outline"
-        className="w-full border-[#e59f14] text-[#e59f14] hover:bg-[#e59f14]/10"
-      >
-        <Calendar className="w-5 h-5" />
-        <span>Salvar na Agenda</span>
-      </Button>
+      {/* Botão WhatsApp */}
+      <div className="flex justify-center">
+        <a
+          href="https://chat.whatsapp.com/BfmFu5RavwhJxMuMO7nBdE?mode=gi_t"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-medium transition-all duration-300 rounded flex items-center gap-3 justify-center px-8 py-4 text-base shadow-lg hover:shadow-green-500/20 hover:-translate-y-0.5 active:translate-y-0"
+        >
+          <MessageCircle className="w-5 h-5" />
+          <span>Entrar no Grupo do WhatsApp</span>
+        </a>
+      </div>
 
       <div role="status" aria-live="polite" className="sr-only">
         Inscrição realizada com sucesso
